@@ -123,8 +123,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* ── Thumbnail ── */}
       <section className="bg-cream">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <div className="aspect-[2/1] rounded-2xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center mb-8 md:mb-12">
-            <span className="text-5xl">📖</span>
+          <div className="aspect-[2/1] rounded-2xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center mb-8 md:mb-12 overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>

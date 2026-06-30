@@ -8,18 +8,12 @@ interface ClassCardProps {
 export default function ClassCard({ yogaClass }: ClassCardProps) {
   return (
     <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-primary/5">
-      {/* Image placeholder */}
       <div className="relative h-52 bg-gradient-to-br from-primary/20 to-primary/5 overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform duration-500">
-              <span className="text-2xl">🧘</span>
-            </div>
-            <span className="text-sm text-primary/60 font-medium">
-              {yogaClass.title}
-            </span>
-          </div>
-        </div>
+        <img
+          src={yogaClass.image}
+          alt={yogaClass.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+        />
       </div>
 
       {/* Content */}

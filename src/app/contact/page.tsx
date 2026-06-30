@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
@@ -9,32 +10,48 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Us",
-    details: ["123 Serenity Lane,", "Andheri West, Mumbai 400053"],
+    details: ["Subhash Chowk, Sector 47", "Gurugram, Haryana 122018"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+91 12345 67890"],
-    href: "tel:+911234567890",
+    details: ["+91 99927 25545"],
+    href: "tel:+919992725545",
   },
   {
     icon: Mail,
     title: "Email Us",
-    details: ["hello@satvikyoga.in"],
-    href: "mailto:hello@satvikyoga.in",
+    details: ["ajkumar2725@gmail.com"],
+    href: "mailto:ajkumar2725@gmail.com",
   },
-  {
-    icon: Clock,
-    title: "Studio Hours",
-    details: ["Mon – Sat: 5:30 AM – 8:00 PM", "Sunday: 7:00 AM – 12:00 PM"],
-  },
+
 ];
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Format the WhatsApp message
+    const text = `*New Inquiry from Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Subject:* ${formData.subject}\n\n*Message:*\n${formData.message}`;
+    
+    // Create the WhatsApp URL
+    const whatsappUrl = `https://wa.me/919992725545?text=${encodeURIComponent(text)}`;
+    
+    // Open in new tab
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-12 pb-8 md:pt-20 md:pb-12 bg-gradient-to-b from-secondary to-cream">
+      <section className="pt-12 pb-8 md:pt-14 md:pb-0 bg-gradient-to-b from-secondary to-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -46,9 +63,9 @@ export default function ContactPage() {
       </section>
 
       {/* ── Contact Cards ── */}
-      <section className="py-12 md:py-16 bg-cream">
+      <section className="py-12 md:py-12 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -96,7 +113,7 @@ export default function ContactPage() {
 
                 <form
                   className="space-y-4"
-                  onSubmit={(e) => e.preventDefault()}
+                  onSubmit={handleFormSubmit}
                 >
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
@@ -109,6 +126,9 @@ export default function ContactPage() {
                       <input
                         id="contact-name"
                         type="text"
+                        required
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Enter your name"
                         className="w-full px-4 py-3 rounded-xl border border-primary/15 bg-cream/50 text-text-dark placeholder:text-text-light/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all text-sm"
                       />
@@ -123,6 +143,9 @@ export default function ContactPage() {
                       <input
                         id="contact-email"
                         type="email"
+                        required
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="you@example.com"
                         className="w-full px-4 py-3 rounded-xl border border-primary/15 bg-cream/50 text-text-dark placeholder:text-text-light/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all text-sm"
                       />
@@ -139,6 +162,9 @@ export default function ContactPage() {
                     <input
                       id="contact-subject"
                       type="text"
+                      required
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       placeholder="What is this about?"
                       className="w-full px-4 py-3 rounded-xl border border-primary/15 bg-cream/50 text-text-dark placeholder:text-text-light/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all text-sm"
                     />
@@ -154,6 +180,9 @@ export default function ContactPage() {
                     <textarea
                       id="contact-message"
                       rows={5}
+                      required
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us how we can help you..."
                       className="w-full px-4 py-3 rounded-xl border border-primary/15 bg-cream/50 text-text-dark placeholder:text-text-light/50 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary/30 transition-all text-sm resize-none"
                     />
@@ -191,7 +220,7 @@ export default function ContactPage() {
                       size="lg"
                       variant="outline"
                       message="Hi, I have a question about Satvik Yoga Classes"
-                      className="border-white text-white hover:bg-white hover:text-green-600"
+                      className="border-white text-white hover:bg-white hover:text-yellow-500"
                     >
                       Chat on WhatsApp
                     </WhatsAppButton>
@@ -202,18 +231,17 @@ export default function ContactPage() {
               {/* Map placeholder */}
               <AnimateOnScroll delay={0.25}>
                 <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-primary/5">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 to-secondary flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                        <MapPin className="w-8 h-8 text-primary" />
-                      </div>
-                      <p className="text-sm text-text-light font-medium mb-1">
-                        Google Maps Embed
-                      </p>
-                      <p className="text-xs text-text-light/60">
-                        Replace with an iframe embed of your studio location
-                      </p>
-                    </div>
+                  <div className="aspect-[4/3] w-full bg-cream">
+                    <iframe
+                      src="https://maps.google.com/maps?q=Subhash%20Chowk,%20Sector%2047,%20Gurugram,%20Haryana%20122018&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Satvik Yoga Location"
+                    ></iframe>
                   </div>
                 </div>
               </AnimateOnScroll>

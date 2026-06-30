@@ -17,6 +17,7 @@ import TestimonialCard from "@/components/TestimonialCard";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { classes } from "@/data/classes";
 import { testimonials } from "@/data/testimonials";
+import Image from "next/image";
 
 const benefits = [
   {
@@ -116,7 +117,7 @@ export default function HomePage() {
 
           <AnimateOnScroll delay={0.2}>
             <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Embrace the ancient wisdom of yoga in a modern, welcoming studio.
+              Embrace the ancient wisdom of yoga with
               Expert-led classes for every body, every level, every journey.
             </p>
           </AnimateOnScroll>
@@ -130,7 +131,7 @@ export default function HomePage() {
                 View Our Classes
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <WhatsAppButton size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+              <WhatsAppButton size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-yellow-500">
                 Enquire Now
               </WhatsAppButton>
             </div>
@@ -139,7 +140,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════ WELCOME ═══════════════════ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text */}
@@ -175,17 +176,19 @@ export default function HomePage() {
             {/* Image placeholder */}
             <AnimateOnScroll delay={0.2}>
               <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/15 to-accent/10 flex items-center justify-center overflow-hidden">
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-4xl">🧘‍♀️</span>
-                    </div>
-                    <p className="text-sm text-text-light">
-                      Studio image placeholder
-                    </p>
-                  </div>
+                {/* Image Container */}
+                <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-primary/5">
+                  <img
+                    src="/welcome.jpeg"
+                    alt="Satvik Yoga Studio Space"
+
+
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
                 </div>
-                {/* Decorative frame */}
+
+                {/* Decorative frame (kept from your original code) */}
                 <div className="absolute -top-4 -right-4 w-full h-full rounded-2xl border-2 border-primary/20 -z-10" />
               </div>
             </AnimateOnScroll>
@@ -194,7 +197,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════ FEATURED CLASSES ═══════════════════ */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-20 md:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -226,7 +229,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════ BENEFITS ═══════════════════ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -259,7 +262,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════ TESTIMONIALS ═══════════════════ */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-20 md:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -279,7 +282,7 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════════════ CTA BANNER ═══════════════════ */}
-      <section className="py-20 md:py-24 bg-gradient-to-r from-primary to-primary-dark relative overflow-hidden">
+      <section className="py-20 md:py-20 bg-gradient-to-r from-primary to-primary-dark relative overflow-hidden">
         {/* Decorative */}
         <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-white/5 -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white/5 translate-y-1/2 -translate-x-1/2" />

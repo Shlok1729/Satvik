@@ -10,13 +10,13 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/blog/${post.slug}`} className="group block">
       <article className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-primary/5 h-full flex flex-col">
-        {/* Thumbnail placeholder */}
+        {/* Thumbnail */}
         <div className="relative h-48 bg-gradient-to-br from-primary/15 to-accent/10 overflow-hidden">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-4xl opacity-50 group-hover:scale-110 transition-transform duration-500">
-              📖
-            </span>
-          </div>
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+          />
           {/* Category badge */}
           <span className="absolute top-4 left-4 bg-accent/90 text-white text-xs font-semibold px-3 py-1 rounded-full">
             {post.category}

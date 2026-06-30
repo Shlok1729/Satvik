@@ -35,7 +35,7 @@ Consistency is the key to lasting change. A morning yoga habit creates a positiv
 *Ready to start your morning practice? Join us at Satvik Yoga and feel the difference from day one.*`,
     date: "2025-06-15",
     readingTime: "4 min read",
-    image: "/images/blog/morning-yoga.jpg",
+    image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818271/f9f85861-a77d-4f66-8349-b29ee9d44b17.png",
     category: "Wellness",
   },
   {
@@ -65,7 +65,7 @@ The best time for pranayama is early morning on an empty stomach. Start with 5 m
 *Join our Meditation & Breathwork class to learn these techniques with expert guidance.*`,
     date: "2025-06-08",
     readingTime: "5 min read",
-    image: "/images/blog/pranayama.jpg",
+    image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818277/c8de3f03-fe63-4ada-9395-96452cbbdbc8.png",
     category: "Breathwork",
   },
   {
@@ -99,7 +99,7 @@ Start with just 15 minutes a day. Consistency matters far more than intensity. O
 *Our Hatha Yoga classes are perfect for stress relief. Come experience the calm.*`,
     date: "2025-05-28",
     readingTime: "5 min read",
-    image: "/images/blog/stress-relief.jpg",
+    image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818660/ed0ae466-77f0-499f-9937-a916e7049978.png",
     category: "Mental Health",
   },
   {
@@ -139,7 +139,7 @@ You don't need a complete overhaul. Start by adding one Sattvic meal a day. Noti
 *At Satvik Yoga, we believe true wellness extends beyond the mat. Join our community and embrace the full yogic lifestyle.*`,
     date: "2025-05-15",
     readingTime: "6 min read",
-    image: "/images/blog/sattvic-diet.jpg",
+    image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818788/8c34d59c-bfcd-4f42-9088-e0a62158b9ae.png",
     category: "Nutrition",
   },
 ];

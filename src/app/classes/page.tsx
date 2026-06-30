@@ -10,7 +10,7 @@ export default function ClassesPage() {
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-12 pb-8 md:pt-20 md:pb-12 bg-gradient-to-b from-secondary to-cream">
+      <section className="pt-12 pb-8 md:pt-16 md:pb-0 bg-gradient-to-b from-secondary to-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -22,11 +22,11 @@ export default function ClassesPage() {
       </section>
 
       {/* ── Class Grid ── */}
-      <section className="py-12 md:py-20 bg-cream">
+      <section className="py-12 md:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {classes.map((yogaClass, i) => (
-              <AnimateOnScroll key={yogaClass.id} delay={i * 0.08}>
+              <AnimateOnScroll key={yogaClass.id} delay={i * 0.02}>
                 <ClassCard yogaClass={yogaClass} />
               </AnimateOnScroll>
             ))}
@@ -35,7 +35,7 @@ export default function ClassesPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-16 bg-white">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <AnimateOnScroll>
             <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-dark mb-4">

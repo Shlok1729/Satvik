@@ -9,34 +9,34 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Priya Sharma",
-    role: "Hatha Yoga Student",
+    name: "Neha Patel",
+    role: "PCOD / PCOS Yoga Student",
     quote:
-      "Satvik Yoga has completely transformed my mornings. The instructors are incredibly patient and attentive. I started as a complete beginner and now I can't imagine a day without my practice.",
-    avatar: "PS",
+      "Struggling with PCOD was overwhelming until I found Satvik Yoga. The targeted practices and breathing techniques helped regulate my cycles and drastically reduced my stress levels.",
+    avatar: "NP",
   },
   {
     id: 2,
-    name: "Rahul Mehta",
-    role: "Ashtanga Yoga Student",
+    name: "Rajesh Kumar",
+    role: "Back & Knee Pain Yoga Student",
     quote:
-      "The Ashtanga classes pushed me in ways I never expected. Beyond the physical strength, I've gained mental clarity that helps me in my work and personal life every single day.",
-    avatar: "RM",
+      "I had chronic lower back and knee pain for years. The therapeutic approach here is incredible. The instructors carefully modify poses for my condition, and I am finally living pain-free.",
+    avatar: "RK",
   },
   {
     id: 3,
-    name: "Ananya Desai",
-    role: "Prenatal Yoga Student",
+    name: "Simran Kaur",
+    role: "Anxiety & Meditation Student",
     quote:
-      "As a first-time mom, I was nervous about exercising during pregnancy. The Prenatal Yoga class at Satvik was exactly what I needed — supportive, safe, and deeply calming.",
-    avatar: "AD",
+      "The anxiety yoga classes are a true sanctuary. Through mindful breathwork and gentle restorative poses, I have found a sense of inner peace that I thought I had lost forever.",
+    avatar: "SK",
   },
   {
     id: 4,
-    name: "Vikram Joshi",
-    role: "Meditation & Breathwork",
+    name: "Sanjay Gupta",
+    role: "BP Management & Old Age Yoga",
     quote:
-      "The breathwork sessions are life-changing. I came in struggling with anxiety, and the pranayama techniques I learned here have given me tools I use every day to stay centred.",
-    avatar: "VJ",
+      "At 65, I was looking for a safe way to stay active and manage my blood pressure. The old age yoga sessions here are gentle yet effective, and my doctors are thrilled with my progress.",
+    avatar: "SG",
   },
 ];

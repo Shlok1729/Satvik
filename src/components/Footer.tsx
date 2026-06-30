@@ -118,33 +118,33 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-primary-light mt-0.5 shrink-0" />
                 <span className="text-white/60">
-                  123 Serenity Lane,
+                  Subhash Chowk, Sector 47,
                   <br />
-                  Andheri West, Mumbai 400053
+                  Gurugram, Haryana 122018
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-primary-light shrink-0" />
                 <a
-                  href="tel:+911234567890"
+                  href="tel:+919992725545"
                   className="text-white/60 hover:text-primary-light transition-colors"
                 >
-                  +91 12345 67890
+                  +91 99927 25545
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-primary-light shrink-0" />
                 <a
-                  href="mailto:hello@satvikyoga.in"
+                  href="mailto:ajkumar2725@gmail.com"
                   className="text-white/60 hover:text-primary-light transition-colors"
                 >
-                  hello@satvikyoga.in
+                  ajkumar2725@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <MessageCircle className="w-4 h-4 text-green-400 shrink-0" />
                 <a
-                  href="https://wa.me/1234567890?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Satvik%20Yoga%20Classes"
+                  href="https://wa.me/919992725545?text=Hi%2C%20I%20want%20to%20know%20more%20about%20Satvik%20Yoga%20Classes"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/60 hover:text-green-400 transition-colors"

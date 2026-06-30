@@ -9,7 +9,7 @@ export default function BlogPage() {
   return (
     <>
       {/* ── Page Header ── */}
-      <section className="pt-12 pb-8 md:pt-20 md:pb-12 bg-gradient-to-b from-secondary to-cream">
+      <section className="pt-12 pb-8 md:pt-16 md:pb-0 bg-gradient-to-b from-secondary to-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimateOnScroll>
             <SectionHeading
@@ -21,7 +21,7 @@ export default function BlogPage() {
       </section>
 
       {/* ── Blog Grid ── */}
-      <section className="py-12 md:py-20 bg-cream">
+      <section className="py-12 md:py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {blogPosts.map((post, i) => (
