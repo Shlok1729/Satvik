@@ -40,11 +40,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-primary/10"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -60,7 +59,7 @@ export default function Navbar() {
               className="h-10 md:h-12 w-auto object-contain"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-heading font-bold text-lg md:text-xl tracking-wide text-text-dark">
+              <span className="font-heading font-bold text-lg md:text-xl tracking-wide text-primary-dark">
                 SATVIK
               </span>
               <span className="font-heading text-[10px] md:text-xs tracking-[0.2em] text-text-light uppercase">
@@ -77,11 +76,10 @@ export default function Navbar() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                      isActive
+                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${isActive
                         ? "bg-primary/10 text-primary"
                         : "text-text-light hover:text-text-dark hover:bg-secondary"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </Link>
@@ -112,18 +110,16 @@ export default function Navbar() {
       {/* ── Mobile Drawer ── */}
       {/* Backdrop */}
       <div
-        className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
       />
 
       {/* Drawer panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-white z-50 md:hidden shadow-2xl transition-transform duration-300 ease-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-72 bg-white z-50 md:hidden shadow-2xl transition-transform duration-300 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-secondary">
           <span className="font-heading font-bold text-lg text-text-dark">
@@ -145,11 +141,10 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${
-                  isActive
+                className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${isActive
                     ? "bg-primary/10 text-primary"
                     : "text-text-light hover:text-text-dark hover:bg-secondary"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>

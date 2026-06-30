@@ -52,36 +52,35 @@ export default function HomePage() {
     <>
       {/* ═══════════════════ HERO ═══════════════════ */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-cream to-secondary" />
+        {/* Background image */}
+        <img
+          src="/hero-bg.png"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
 
-        {/* Decorative blobs */}
-        <div className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
+        {/* Heavy overlay for text legibility */}
+        <div className="absolute inset-0 bg-black/60" />
 
-        {/* Floating decorative elements */}
-        <div className="absolute top-1/4 right-1/4 animate-pulse">
-          <Sun className="w-8 h-8 text-accent/20" />
-        </div>
-        <div className="absolute bottom-1/3 left-1/5 animate-pulse delay-1000">
-          <Sparkles className="w-6 h-6 text-primary/20" />
-        </div>
+        {/* Subtle gradient on top of overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <AnimateOnScroll>
-            <span className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+            <span className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm text-white px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-white/20">
               <Leaf className="w-4 h-4" />
               Pure · Balanced · Harmonious
             </span>
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={0.1}>
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-text-dark leading-tight mb-6">
+            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Find Your{" "}
-              <span className="text-primary relative">
+              <span className="text-accent relative">
                 Inner Peace
                 <svg
-                  className="absolute -bottom-2 left-0 w-full h-3 text-accent/30"
+                  className="absolute -bottom-2 left-0 w-full h-3 text-accent/50"
                   viewBox="0 0 200 12"
                   preserveAspectRatio="none"
                 >
@@ -99,7 +98,7 @@ export default function HomePage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll delay={0.2}>
-            <p className="text-lg md:text-xl text-text-light max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10 leading-relaxed">
               Embrace the ancient wisdom of yoga in a modern, welcoming studio.
               Expert-led classes for every body, every level, every journey.
             </p>
@@ -109,12 +108,12 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/classes"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:bg-accent-dark hover:shadow-lg hover:shadow-accent/25 hover:-translate-y-0.5 transition-all duration-300"
               >
                 View Our Classes
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <WhatsAppButton size="lg" variant="outline">
+              <WhatsAppButton size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                 Enquire Now
               </WhatsAppButton>
             </div>
