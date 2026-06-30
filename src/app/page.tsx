@@ -215,39 +215,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* ═══════════════════ FEATURED CLASSES ═══════════════════ */}
-      <section className="py-20 md:py-16 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimateOnScroll>
-            <SectionHeading
-              title="Our Featured Classes"
-              subtitle="Explore our most popular sessions designed to nurture your body, mind, and spirit."
-            />
-          </AnimateOnScroll>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredClasses.map((yogaClass, i) => (
-              <AnimateOnScroll key={yogaClass.id} delay={i * 0.1}>
-                <ClassCard yogaClass={yogaClass} />
-              </AnimateOnScroll>
-            ))}
-          </div>
-
-          <AnimateOnScroll delay={0.3}>
-            <div className="text-center mt-12">
-              <Link
-                href="/classes"
-                className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full font-heading font-semibold hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-300"
-              >
-                View All Classes
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </AnimateOnScroll>
-        </div>
-      </section>
-
       {/* ═══════════════════ CORPORATE YOGA ═══════════════════ */}
       <section className="py-20 md:py-16 bg-text-dark relative overflow-hidden">
         {/* Decorative elements */}
@@ -324,6 +291,40 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════ FEATURED CLASSES ═══════════════════ */}
+      <section className="py-20 md:py-16 bg-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <SectionHeading
+              title="Our Featured Classes"
+              subtitle="Explore our most popular sessions designed to nurture your body, mind, and spirit."
+            />
+          </AnimateOnScroll>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredClasses.map((yogaClass, i) => (
+              <AnimateOnScroll key={yogaClass.id} delay={i * 0.1}>
+                <ClassCard yogaClass={yogaClass} />
+              </AnimateOnScroll>
+            ))}
+          </div>
+
+          <AnimateOnScroll delay={0.3}>
+            <div className="text-center mt-12">
+              <Link
+                href="/classes"
+                className="inline-flex items-center gap-2 bg-primary text-white px-7 py-3 rounded-full font-heading font-semibold hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25 hover:-translate-y-0.5 transition-all duration-300"
+              >
+                View All Classes
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </AnimateOnScroll>
+        </div>
+      </section>
+
+
 
       {/* ═══════════════════ BENEFITS ═══════════════════ */}
       <section className="py-20 md:py-20 bg-white">
