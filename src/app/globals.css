@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* ── Satvik Palette (swap hex codes here) ── */
+:root {
+  --color-primary:       #7C9A6E;
+  --color-primary-dark:  #5A7A4A;
+  --color-primary-light: #A8C49A;
+  --color-secondary:     #F5F0E8;
+  --color-accent:        #E8963A;
+  --color-accent-dark:   #C77A2E;
+  --color-text-dark:     #2D2D2D;
+  --color-text-light:    #6B6B6B;
+  --color-white:         #FFFFFF;
+  --color-cream:         #FAF8F4;
+}
+
+/* ── Tailwind v4 theme tokens ── */
+@theme inline {
+  --color-primary:       var(--color-primary);
+  --color-primary-dark:  var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-secondary:     var(--color-secondary);
+  --color-accent:        var(--color-accent);
+  --color-accent-dark:   var(--color-accent-dark);
+  --color-text-dark:     var(--color-text-dark);
+  --color-text-light:    var(--color-text-light);
+  --color-cream:         var(--color-cream);
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-dark);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-dark);
+}
+
+/* ── Scrollbar (subtle) ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
