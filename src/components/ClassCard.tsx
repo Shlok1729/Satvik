@@ -1,4 +1,3 @@
-import { Clock, Calendar, BarChart3 } from "lucide-react";
 import WhatsAppButton from "./WhatsAppButton";
 import type { YogaClass } from "@/data/classes";
 
@@ -21,10 +20,6 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
             </span>
           </div>
         </div>
-        {/* Level badge */}
-        <span className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-text-dark text-xs font-semibold px-3 py-1 rounded-full">
-          {yogaClass.level}
-        </span>
       </div>
 
       {/* Content */}
@@ -36,21 +31,6 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
           {yogaClass.description}
         </p>
 
-        {/* Meta info */}
-        <div className="flex flex-wrap gap-3 mb-5 text-sm text-text-light">
-          <span className="inline-flex items-center gap-1.5">
-            <Calendar className="w-4 h-4 text-primary" />
-            {yogaClass.schedule}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <Clock className="w-4 h-4 text-primary" />
-            {yogaClass.duration}
-          </span>
-          <span className="inline-flex items-center gap-1.5">
-            <BarChart3 className="w-4 h-4 text-primary" />
-            {yogaClass.level}
-          </span>
-        </div>
 
         {/* WhatsApp CTA */}
         <WhatsAppButton

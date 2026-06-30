@@ -54,7 +54,7 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background image */}
         <img
-          src="/hero-bg.png"
+          src="/back1.jpeg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 w-full h-full object-cover"
@@ -93,7 +93,24 @@ export default function HomePage() {
                 </svg>
               </span>
               <br />
-              with Satvik Yoga
+              with{" "}
+              <span className="text-primary-dark relative">
+                Satvik Yoga
+                <svg
+                  className="absolute -bottom-2 left-0 w-full h-3 text-primary-dark"
+                  viewBox="0 0 200 12"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 6 Q50 0 100 6 Q150 12 200 6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </span>
+
+
             </h1>
           </AnimateOnScroll>
 
