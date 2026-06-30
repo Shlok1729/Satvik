@@ -91,7 +91,7 @@ export default function Navbar() {
           {/* ── Desktop WhatsApp CTA ── */}
           <div className="hidden md:block">
             <WhatsAppButton size="sm" variant="icon">
-              WhatsApp Us
+              Enquire Us
             </WhatsAppButton>
           </div>
 
@@ -153,7 +153,7 @@ export default function Navbar() {
 
           <div className="mt-4 pt-4 border-t border-secondary">
             <WhatsAppButton size="md" className="w-full">
-              WhatsApp Us
+              Enquire Us
             </WhatsAppButton>
           </div>
         </nav>

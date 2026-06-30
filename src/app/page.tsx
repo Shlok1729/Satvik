@@ -248,7 +248,82 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ═══════════════════ CORPORATE YOGA ═══════════════════ */}
+      <section className="py-20 md:py-16 bg-text-dark relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none" />
 
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Text Content */}
+            <AnimateOnScroll>
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 text-accent font-semibold text-sm mb-8 backdrop-blur-md">
+                  <Sparkles className="w-4 h-4" />
+                  <span>For Businesses & Teams</span>
+                </div>
+                <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                  Elevate Your Workplace with <br />
+                  <span className="text-accent relative inline-block mt-2">
+                    Corporate Yoga
+                    <svg className="absolute -bottom-2 left-0 w-full h-3 text-accent/50" viewBox="0 0 200 12" preserveAspectRatio="none">
+                      <path d="M0 6 Q50 0 100 6 Q150 12 200 6" fill="none" stroke="currentColor" strokeWidth="3" />
+                    </svg>
+                  </span>
+                </h2>
+                <p className="text-white/70 text-lg mb-10 leading-relaxed max-w-xl">
+                  Boost employee morale, reduce burnout, and increase productivity. We bring tailored yoga, meditation, and desk-relief sessions directly to your office or virtually to your remote team.
+                </p>
+
+                <div className="space-y-4 mb-10">
+                  {[
+                    "Stress Relief & Mindfulness",
+                    "Posture Correction & Desk Ergonomics",
+                    "Team Building & Bonding",
+                    "Customizable Timings & Schedules"
+                  ].map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3 text-white/80">
+                      <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                        <Leaf className="w-3.5 h-3.5 text-primary-light" />
+                      </div>
+                      <span className="font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <WhatsAppButton
+                    size="lg"
+                    message="Hi, I'm interested in booking Corporate Yoga sessions for my team."
+                    className="bg-accent text-text-dark hover:bg-white border-none hover:text-yellow-500"
+                  >
+                    Enquire for Your Team
+                  </WhatsAppButton>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
+            {/* Image Grid */}
+            <AnimateOnScroll delay={0.2}>
+              <div className="grid grid-cols-2 gap-4 md:gap-6">
+                <div className="space-y-4 md:space-y-6 mt-12 md:mt-24">
+                  <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative group">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
+                    <img src="https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782846181/8de24e12-7b52-4c84-a3da-1029c8fe348e.png" alt="Corporate Yoga Session" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                </div>
+                <div className="space-y-4 md:space-y-6">
+                  <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl border border-white/10 relative group">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors z-10" />
+                    <img src="https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818892/d8f69ec7-9a78-4437-980d-fba319248880.png" alt="Office Wellness" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════════════ BENEFITS ═══════════════════ */}
       <section className="py-20 md:py-20 bg-white">
