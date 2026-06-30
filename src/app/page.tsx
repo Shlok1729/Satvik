@@ -195,6 +195,26 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      {/* ═══════════════════ WHAT WE TEACH ═══════════════════ */}
+      <section className="py-16 md:py-16 bg-white border-t border-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AnimateOnScroll>
+            <SectionHeading
+              title="What We Teach"
+              subtitle="Specialized therapeutic and traditional yoga practices tailored to your specific health needs and goals."
+            />
+          </AnimateOnScroll>
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4 max-w-5xl mx-auto mt-10">
+            {classes.map((c, i) => (
+              <AnimateOnScroll key={c.id} delay={i * 0.02}>
+                <div className="px-5 py-2.5 rounded-full bg-cream border border-primary/10 text-text-dark font-medium text-sm md:text-base hover:bg-primary hover:text-white hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-default">
+                  {c.title}
+                </div>
+              </AnimateOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* ═══════════════════ FEATURED CLASSES ═══════════════════ */}
       <section className="py-20 md:py-16 bg-cream">
@@ -227,6 +247,8 @@ export default function HomePage() {
           </AnimateOnScroll>
         </div>
       </section>
+
+
 
       {/* ═══════════════════ BENEFITS ═══════════════════ */}
       <section className="py-20 md:py-20 bg-white">
