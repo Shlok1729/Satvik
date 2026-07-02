@@ -25,6 +25,12 @@ const team = [
     experience: "8+ Years Experience",
     image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782814115/97095778-8ed4-4270-8064-2677e1718821.png",
   },
+  {
+    name: "Ashtanga Teacher",
+    designation: "Ashtanga Teacher",
+    experience: "6+ Years Experience",
+    image: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782989864/358a207a-9d90-42a0-a1f6-ca76a83dafb7.png",
+  },
 
 ];
 
@@ -154,26 +160,31 @@ export default function AboutPage() {
             />
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-center">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto justify-center">
             {team.map((member, i) => (
               <AnimateOnScroll key={member.name} delay={i * 0.1}>
-                <div className="group bg-cream rounded-2xl p-6 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1">
-                  <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:scale-105 transition-transform duration-500 overflow-hidden relative border border-primary/20">
+                <div className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1.5 border border-primary/5 flex flex-col">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     />
                   </div>
-                  <h3 className="font-heading text-xl font-bold text-text-dark mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm font-medium text-primary mb-3">
-                    {member.designation}
-                  </p>
-                  <span className="inline-block bg-white text-text-light text-xs font-semibold px-3 py-1 rounded-full border border-primary/10">
-                    {member.experience}
-                  </span>
+
+                  <div className="p-5 md:p-6 flex-1 flex flex-col items-center text-center bg-cream group-hover:bg-primary/5 transition-colors duration-300">
+                    <h3 className="font-heading text-lg font-bold text-text-dark mb-2 group-hover:text-primary transition-colors">
+                      {member.name}
+                    </h3>
+                    <p className="text-sm font-medium text-primary mb-5 leading-relaxed">
+                      {member.designation}
+                    </p>
+                    <div className="mt-auto">
+                      <span className="inline-block bg-white text-text-dark/70 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full border border-primary/10 shadow-sm">
+                        {member.experience}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -196,14 +207,15 @@ export default function AboutPage() {
               const Icon = value.icon;
               return (
                 <AnimateOnScroll key={value.title} delay={i * 0.1}>
-                  <div className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg transition-all duration-500 hover:-translate-y-1 border border-primary/5">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
-                      <Icon className="w-7 h-7 text-primary" />
+                  <div className="group bg-white rounded-3xl p-8 text-center shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-primary/5 relative overflow-hidden z-10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+                    <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary transition-all duration-500 group-hover:scale-110 group-hover:-rotate-3 shadow-sm">
+                      <Icon className="w-8 h-8 text-primary group-hover:text-white transition-colors duration-500" />
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-text-dark mb-3">
+                    <h3 className="font-heading text-xl font-bold text-text-dark mb-4 group-hover:text-primary transition-colors duration-300">
                       {value.title}
                     </h3>
-                    <p className="text-sm text-text-light leading-relaxed">
+                    <p className="text-sm text-text-light leading-relaxed group-hover:text-text-dark transition-colors duration-300">
                       {value.description}
                     </p>
                   </div>
