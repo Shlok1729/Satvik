@@ -25,6 +25,28 @@ export const metadata: Metadata = {
     "pranayama",
     "wellness",
   ],
+  openGraph: {
+    title: "Satvik Yoga Classes — Find Your Inner Peace",
+    description: "Embrace the Sattvic path with expert-led yoga classes. Ashtanga, Hatha, Prenatal, Meditation & more in a serene, welcoming studio.",
+    url: "https://satvikyoga.com",
+    siteName: "Satvik Yoga",
+    images: [
+      {
+        url: "https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818892/d8f69ec7-9a78-4437-980d-fba319248880.png",
+        width: 1200,
+        height: 630,
+        alt: "Satvik Yoga Studio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Satvik Yoga Classes — Find Your Inner Peace",
+    description: "Embrace the Sattvic path with expert-led yoga classes. Ashtanga, Hatha, Prenatal, Meditation & more in a serene, welcoming studio.",
+    images: ["https://res.cloudinary.com/dhqqj1ehx/image/upload/v1782818892/d8f69ec7-9a78-4437-980d-fba319248880.png"],
+  },
 };
 
 export default function RootLayout({
