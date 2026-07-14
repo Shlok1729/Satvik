@@ -8,12 +8,14 @@ import WhatsAppButton from "./WhatsAppButton";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+
   { href: "/classes", label: "Classes" },
-  { href: "/treatments", label: "Treatments" },
   { href: "/corporate", label: "Corporate" },
+  { href: "/treatments", label: "Treatments" },
+
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
@@ -43,8 +45,8 @@ export default function Navbar() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-primary/10"
-          : "bg-transparent"
+        ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-primary/10"
+        : "bg-transparent"
         }`}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,8 +81,8 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${isActive
-                        ? "bg-primary/10 text-primary"
-                        : "text-text-light hover:text-text-dark hover:bg-secondary"
+                      ? "bg-primary/10 text-primary"
+                      : "text-text-light hover:text-text-dark hover:bg-secondary"
                       }`}
                   >
                     {link.label}
@@ -144,8 +146,8 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={`px-4 py-3 rounded-xl text-base font-medium transition-colors ${isActive
-                    ? "bg-primary/10 text-primary"
-                    : "text-text-light hover:text-text-dark hover:bg-secondary"
+                  ? "bg-primary/10 text-primary"
+                  : "text-text-light hover:text-text-dark hover:bg-secondary"
                   }`}
               >
                 {link.label}
