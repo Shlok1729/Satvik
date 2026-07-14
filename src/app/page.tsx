@@ -260,13 +260,13 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <WhatsAppButton
-                    size="lg"
-                    message="Hi, I'm interested in booking Corporate Yoga sessions for my team."
-                    className="bg-accent text-text-dark hover:bg-white border-none hover:text-yellow-500"
+                  <Link
+                    href="/corporate"
+                    className="inline-flex items-center justify-center gap-2 bg-accent text-text-dark px-8 py-4 rounded-full font-heading font-semibold text-lg hover:bg-white hover:text-yellow-500 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
                   >
-                    Enquire for Your Team
-                  </WhatsAppButton>
+                    Learn About Corporate Yoga
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
                 </div>
               </div>
             </AnimateOnScroll>
