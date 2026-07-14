@@ -8,7 +8,7 @@ interface WhatsAppButtonProps {
   size?: "sm" | "md" | "lg";
 }
 
-const WHATSAPP_NUMBER = "9992725545";
+const WHATSAPP_NUMBER = "919992725545";
 
 export default function WhatsAppButton({
   message = "Hi, I want to know more about Satvik Yoga Classes",
